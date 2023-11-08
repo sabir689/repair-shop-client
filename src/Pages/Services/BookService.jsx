@@ -47,8 +47,8 @@ const BookService = () => {
                     text: 'Service booked successfully',
                 })
                 .then(() => {
-                    // You can redirect the user to another page or perform any additional actions here
-                    window.location.href = '/success-page'; // Example: Redirect to a success page
+                   
+                    window.location.href = '/bookings';
                 });
             }
         });

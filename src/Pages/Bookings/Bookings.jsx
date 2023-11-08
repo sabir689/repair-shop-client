@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 
-// import BookingRow from "./BookingRow";
+import Swal from 'sweetalert2';
+
 import { AuthContext } from "../../FirebaseConfig/AuthProvider";
 import BookingRow from "./BookingRow";
 
@@ -16,23 +18,35 @@ const Bookings = () => {
             .then(data => setBookings(data))
     }, [url]);
 
-    const handleDelete = id => {
-        const proceed = confirm('Are You sure you want to delete');
-        if (proceed) {
+    const handleDelete = (id) => {
+        Swal.fire({
+          title: 'Are you sure you want to delete?',
+          text: 'This action cannot be undone.',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, delete it!',
+          cancelButtonText: 'No, keep it',
+        }).then((result) => {
+          if (result.isConfirmed) {
             fetch(`http://localhost:5000/bookings/${id}`, {
-                method: 'DELETE'
+              method: 'DELETE',
             })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.deletedCount > 0) {
-                        alert('deleted successful');
-                        const remaining = bookings.filter(booking => booking._id !== id);
-                        setBookings(remaining);
-                    }
-                })
-        }
-    }
+              .then((res) => res.json())
+              .then((data) => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                  Swal.fire('Deleted successful', '', 'success');
+                  const remaining = bookings.filter((booking) => booking._id !== id);
+                  setBookings(remaining);
+                }
+              })
+              .catch((error) => {
+                Swal.fire('Error', 'An error occurred while deleting.', 'error');
+              });
+          }
+        });
+      };
+      
 
     const handleBookingConfirm = id => {
         fetch(`http://localhost:5000/bookings/${id}`, {
