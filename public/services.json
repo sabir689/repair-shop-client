@@ -1,0 +1,148 @@
+[
+    {
+      
+      "service_name": "Electronics Repair",
+      "service_description": "Fixing electronic devices.",
+      "service_image": "https://i.ibb.co/bHdzZWv/service1.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 101,
+      "provider_name": "Tony Stark",
+      "provider_image": "https://i.ibb.co/N3LdRDM/service1prov.jpg",
+      "price_id": "price_1001",
+      "price_amount": "$50"
+    },
+    {
+      
+      "service_name": "Appliance Repair",
+      "service_description": "Repairing household appliances.",
+      "service_image": "https://i.ibb.co/NCR51mC/service2.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 102,
+      "provider_name": "Ananta Jolil",
+      "provider_image": "https://i.ibb.co/fQBrQwJ/2.jpg",
+      "price_id": "price_1002",
+      "price_amount": "$60"
+    },
+    {
+      
+      "service_name": "Car Repair",
+      "service_description": "Fixing automotive issues.",
+      "service_image": "https://i.ibb.co/Gdcswgg/service3.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 103,
+      "provider_name": "Dom",
+      "provider_image": "https://i.ibb.co/1vKWRt8/3.webp",
+      "price_id": "price_1003",
+      "price_amount": "$80"
+    },
+    {
+      
+      "service_name": "Plumbing Services",
+      "service_description": "Solving plumbing problems.",
+      "service_image": "https://i.ibb.co/601xPMp/ser4.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 104,
+      "provider_name": "Agent007",
+      "provider_image": "https://i.ibb.co/r0wC6x4/4.jpg",
+      "price_id": "price_1004",
+      "price_amount": "$45"
+    },
+    {
+      
+      "service_name": "Carpentry Repairs",
+      "service_description": "Woodworking and carpentry solutions.",
+      "service_image": "https://i.ibb.co/gzPh9RW/ser5.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 105,
+      "provider_name": "Tony Stark",
+      "provider_image": "https://i.ibb.co/74phYJQ/5.jpg",
+      "price_id": "price_1005",
+      "price_amount": "$70"
+    },
+    {
+      
+      "service_name": "Phone Screen Replacement",
+      "service_description": "Replace cracked phone screens.",
+      "service_image": "https://i.ibb.co/9bHhF78/ser6.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 106,
+      "provider_name": "Hulk",
+      "provider_image": "https://i.ibb.co/vxx09vc/6.webp",
+      "price_id": "price_1006",
+      "price_amount": "$30"
+    },
+  
+    {
+      
+      "service_name": "Bicycle Repair",
+      "service_description": "Fixing and maintaining bicycles for the community.",
+      "service_image": "https://i.ibb.co/jvpn8MY/bike-repair.webp",
+      "view_detail_button": "View Details",
+      "provider_id": 107,
+      "provider_name": "Cycling Pro",
+      "provider_image": "https://i.ibb.co/zG7ysQt/7.jpg",
+      "price_id": "price_1007",
+      "price_amount": "$25"
+    },
+    {
+      
+      "service_name": "Computer Repair",
+      "service_description": "Repairing and troubleshooting computer issues.",
+      "service_image": "https://i.ibb.co/gJSt1F4/PC-Repair-scaled.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 108,
+      "provider_name": "Tech Genius",
+      "provider_image": "https://i.ibb.co/JrytHN9/8.webp",
+      "price_id": "price_1008",
+      "price_amount": "$55"
+    },
+    {
+     
+      "service_name": "Gardening Services",
+      "service_description": "Gardening and landscaping services for homes and communities.",
+      "service_image": "https://i.ibb.co/p14vJQr/Garden-services-is-more-cost-effective-than-you-may-realize.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 109,
+      "provider_name": "Green Thumb",
+      "provider_image": "https://i.ibb.co/CQq2TFM/9.jpg",
+      "price_id": "price_1009",
+      "price_amount": "$40"
+    },
+    {
+      
+      "service_name": "Home Renovation",
+      "service_description": "Renovating and improving homes for community members.",
+      "service_image": "https://i.ibb.co/f9PLJ6k/Home-Renovations.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 110,
+      "provider_name": "Home Builder",
+      "provider_image": "https://i.ibb.co/dJfW6x6/10.webp",
+      "price_id": "price_1010",
+      "price_amount": "$100"
+    },
+    {
+     
+      "service_name": "Clothing Repair",
+      "service_description": "Mending and altering clothing items.",
+      "service_image": "https://i.ibb.co/2PXGfgd/cloth.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 111,
+      "provider_name": "Sewing Expert",
+      "provider_image": "https://i.ibb.co/Phrgpn9/11.jpg",
+      "price_id": "price_1011",
+      "price_amount": "$20"
+    },
+    {
+      
+      "service_name": "Pet Care Services",
+      "service_description": "Providing pet care and grooming services.",
+      "service_image": "https://i.ibb.co/wpfFr78/pet.jpg",
+      "view_detail_button": "View Details",
+      "provider_id": 112,
+      "provider_name": "Pet Lover",
+      "provider_image": "https://i.ibb.co/NKzPTyc/12.jpg",
+      "price_id": "price_1012",
+      "price_amount": "$35"
+    }
+  ]
+    
