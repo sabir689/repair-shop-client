@@ -17,7 +17,7 @@ const AddServiceCard = ({ added,addeds, setAddeds }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/added/${_id}`, {
+                fetch(`https://services-server-sooty.vercel.app/added/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

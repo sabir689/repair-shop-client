@@ -45,7 +45,11 @@ const Navbar = () => {
 
                     </ul>
                 </div>
+                <div className="flex"> 
+                    <img className="h-16 rounded-box" src="https://i.ibb.co/rdYntSQ/logo.webp " alt="" />
                 <a className="btn btn-ghost normal-case text-xl">Repair Cafe</a>
+                </div>
+                
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

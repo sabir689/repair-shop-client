@@ -22,7 +22,7 @@ const AddProductPage = () => {
         }
         console.log(newAdded);
 
-        fetch('http://localhost:5000/added', {
+        fetch('https://services-server-sooty.vercel.app/added', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import motion from Framer Motion
 import ServiceCard from "./ServiceCard";
@@ -6,9 +7,9 @@ import ServiceCard from "./ServiceCard";
 const Services = ({ Home }) => {
     const [services, setServices] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
-
+console.log(Services);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://services-server-sooty.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
             .catch(error => console.error("Error fetching services:", error));
@@ -34,7 +35,7 @@ const Services = ({ Home }) => {
 
             <div className="search-bar justify-center  flex">
                 <input
-                className="p-4 border-2 rounded-box shadow-2xl m-10 "
+                    className="p-4 border-2 rounded-box shadow-2xl m-10 "
                     type="text"
                     placeholder="Search by service name"
                     value={searchQuery}

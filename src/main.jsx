@@ -21,12 +21,14 @@ import Bookings from './Pages/Bookings/Bookings';
 import PrivateRoute from './FirebaseConfig/PrivateRoute';
 import ManageServices from './Dashboard/ManageServices';
 import UpdateAdded from './Dashboard/UpdateAdded';
+import ErrorPage from './Root/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",
@@ -55,18 +57,18 @@ const router = createBrowserRouter([
       {
         path:"/manageServices",
         element:<PrivateRoute><ManageServices></ManageServices></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/added')
+        loader:()=>fetch('https://services-server-sooty.vercel.app/added')
       },
 
       {
         path: 'details/:id', 
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+        loader: ({params}) => fetch(`https://services-server-sooty.vercel.app/services/${params.id}`)
       },
       {
         path: 'book/:id', 
         element: <BookService></BookService>,
-        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+        loader: ({params}) => fetch(`https://services-server-sooty.vercel.app/services/${params.id}`)
       },
       {
         path: '/addServices', 
@@ -76,7 +78,7 @@ const router = createBrowserRouter([
       {
         path: 'updateAdded/:id', 
         element: <PrivateRoute><UpdateAdded></UpdateAdded></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/added/${params.id}`)
+        loader:({params})=>fetch(`https://services-server-sooty.vercel.app/added/${params.id}`)
    
       },
       {

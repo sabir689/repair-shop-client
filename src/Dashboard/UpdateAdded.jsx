@@ -28,7 +28,7 @@ const UpdateAdded = () => {
         email: user?.email,serviceName,price,description}
 
         // send data to the server
-        fetch(`http://localhost:5000/added/${_id}`, {
+        fetch(`https://services-server-sooty.vercel.app/added/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
