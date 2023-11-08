@@ -1,22 +1,28 @@
 import { Link } from "react-router-dom";
 import Services from "../Services/Services";
 import Banner from "./Banner";
-
-
+import { motion } from "framer-motion";
 
 const Home = () => {
-    return (
-        <div>
-            <Banner></Banner>
-            <div className="border-2 p-8 rounded-2xl">
-                <Services Home={true}></Services>
-            </div>
-            <Link to={"allServices"}>
-                <div className="justify-center flex mb-10 mt-10">
-                    <button className="btn btn-primary">All Services</button>
-                </div>
-            </Link>
-            <div className="hero min-h-screen rounded-2xl shadow-2xl border-2 bg-base-200">
+  return (
+    <div>
+      <Banner />
+      <div className="border-2 p-8 rounded-2xl">
+        <Services Home={true} />
+      </div>
+      <Link to={"allServices"}>
+        <div className="justify-center flex mb-10 mt-10">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="btn btn-primary"
+          >
+            All Services
+          </motion.button>
+        </div>
+      </Link>
+      
+<div className="hero min-h-screen rounded-2xl shadow-2xl border-2 bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src="https://i.ibb.co/9bHhF78/ser6.jpg" className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
@@ -97,10 +103,10 @@ const Home = () => {
                     <div className="stat-desc text-secondary">31 tasks remaining</div>
                 </div>
 
-            </div>
-
-        </div>
-    );
+            </div> 
+    </div>
+  );
 };
 
 export default Home;
+

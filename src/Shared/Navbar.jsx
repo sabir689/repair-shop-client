@@ -57,7 +57,7 @@ const Navbar = () => {
             <div className="navbar-end">
 
 
-                <li> Appointment </li>
+                <li className="border-2 p-4 rounded-2xl"> Appointment </li>
 
             </div>
         </div>
