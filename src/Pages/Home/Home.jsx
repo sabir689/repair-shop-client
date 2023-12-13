@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Services from "../Services/Services";
 import Banner from "./Banner";
 import { motion } from "framer-motion";
+import UniqueFeature1 from "../../UniqueFetaure/UniqueFeature1";
+import UniqueFeature2 from "../../UniqueFetaure/UniqueFeature2";
 
 
 const Home = () => {
@@ -11,6 +13,7 @@ const Home = () => {
             <div className="border-2 p-8 rounded-2xl">
                 <Services Home={true} />
             </div>
+            
             <Link to={"allServices"}>
                 <div className="justify-center flex mb-10 mt-10">
                     <motion.button
@@ -22,7 +25,8 @@ const Home = () => {
                     </motion.button>
                 </div>
             </Link>
-
+            <UniqueFeature2></UniqueFeature2>
+            {/* hero part */}
             <div className="hero min-h-screen rounded-2xl shadow-2xl border-2 bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src="https://i.ibb.co/9bHhF78/ser6.jpg" className="max-w-sm rounded-lg shadow-2xl" />
@@ -36,7 +40,9 @@ const Home = () => {
 
 
             </div>
-            <div className="flex mx-auto p-8 border-2 rounded-2xl mt-10">
+            <UniqueFeature1></UniqueFeature1>
+            {/* offer tym part */}
+            <div className="flex mx-auto p-8 border-2 rounded-2xl ">
                 <div className="card bg-base-100 shadow-xl">
                     <figure>
                         <img src="https://i.ibb.co/dDBfJ8H/section.jpg" alt="Shoes" />
@@ -68,7 +74,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="stats shadow-2xl border-2 p-8 ml-4 md:ml-60 mt-10 mb-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* likes and other part */}
+            <div className="stats shadow-2xl border-2 p-8  flex gap-4">
                 <div className="stat">
                     <div className="stat-figure text-primary">
                         <svg
@@ -124,6 +131,7 @@ const Home = () => {
                     <div className="stat-desc text-secondary">31 tasks remaining</div>
                 </div>
             </div>
+            
 
 
         </div>

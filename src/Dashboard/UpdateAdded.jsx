@@ -31,11 +31,16 @@ const UpdateAdded = () => {
         fetch(`https://services-server-sooty.vercel.app/added/${_id}`, {
             method: 'PUT',
             headers: {
-                'content-type': 'application/json'
+                'Content-Type': 'application/json', // Use 'Content-Type' instead of 'content-type'
             },
-            body: JSON.stringify(updatedAdded)
+            body: JSON.stringify(updatedAdded),
         })
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`HTTP error! Status: ${res.status}`);
+                }
+                return res.json();
+            })
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
@@ -44,9 +49,20 @@ const UpdateAdded = () => {
                         text: 'Service Updated Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
-                    })
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'No service was updated',
+                        icon: 'error',
+                        confirmButtonText: 'Ok'
+                    });
                 }
             })
+            .catch(error => {
+                console.error("Fetch error:", error);
+            });
+        
     }
 
     return (

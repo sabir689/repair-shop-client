@@ -7,7 +7,7 @@ import ServiceCard from "./ServiceCard";
 const Services = ({ Home }) => {
     const [services, setServices] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
-console.log(Services);
+
     useEffect(() => {
         fetch('https://services-server-sooty.vercel.app/services')
             .then(res => res.json())
